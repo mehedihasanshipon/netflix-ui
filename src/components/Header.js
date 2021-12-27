@@ -7,16 +7,16 @@ function Header() {
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
-          if (window.scrollY > 100) {
-            setIsDark(true);
-          } else setIsDark(false);
+            if (window.scrollY > 100) {
+                setIsDark(true);
+            } else setIsDark(false);
         });
-    
+
         return () => {
-          window.removeEventListener("scroll");
+            window.removeEventListener("scroll");
         };
-        
-      }, []);
+
+    }, []);
 
     return (
         <HeaderContainer dark={isDark}>
